@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc && vite build --mode production",
+    "preview": "vite preview",
+    "host": "http-server dist"
   },
   "dependencies": {
     "vue": "^3.3.4"
