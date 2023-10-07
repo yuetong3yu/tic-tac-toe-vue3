@@ -75,15 +75,15 @@ const whoWin = computed(() => {
   }
   if (
     constructedString.value[2] !== '?' &&
-    constructedString.value[2] === constructedString.value[5] &&
-    constructedString.value[2] === constructedString.value[8]
+    constructedString.value[2] === constructedString.value[4] &&
+    constructedString.value[2] === constructedString.value[6]
   ) {
     return constructedString.value[2]
   }
   if (
     constructedString.value[2] !== '?' &&
-    constructedString.value[2] === constructedString.value[4] &&
-    constructedString.value[2] === constructedString.value[7]
+    constructedString.value[2] === constructedString.value[5] &&
+    constructedString.value[2] === constructedString.value[8]
   ) {
     return constructedString.value[2]
   }

@@ -22,6 +22,6 @@ const winnerCB = (winner: string) => {
   if (winner.length) winnerStr.value = winner === '0' ? 'Circle' : 'Cross'
 }
 const onRestart = () => {
-  console.log('1234 restart')
+  location.reload()
 }
 </script>
