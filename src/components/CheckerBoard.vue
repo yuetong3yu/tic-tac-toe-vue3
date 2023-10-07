@@ -105,6 +105,7 @@ const whoWin = computed(() => {
 })
 
 const onCellClick = (position: [number, number]) => {
+  if (whoWin.value !== null) return
   if (checkerBoardState.value[position[0]][position[1]] !== null) return
   checkerBoardState.value[position[0]][position[1]] = currentPlayerState.value
   currentPlayerState.value = currentPlayerState.value === 0 ? 1 : 0
