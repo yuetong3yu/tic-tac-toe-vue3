@@ -22,12 +22,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, defineEmits, watch } from 'vue'
 import HorizontalLine from './HorizontalLine.vue'
 import VerticalLine from './VerticalLine.vue'
 import Cross from './Cross.vue'
 import Circle from './Circle.vue'
 
+const emit = defineEmits(['winner'])
 const checkerBoardState = ref<(null | number)[][]>([
   new Array(3).fill(null),
   new Array(3).fill(null),
@@ -108,4 +109,8 @@ const onCellClick = (position: [number, number]) => {
   checkerBoardState.value[position[0]][position[1]] = currentPlayerState.value
   currentPlayerState.value = currentPlayerState.value === 0 ? 1 : 0
 }
+
+watch(whoWin, () => {
+  emit('winner', whoWin.value)
+})
 </script>
